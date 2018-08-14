@@ -30,7 +30,7 @@ https://aws.amazon.com/ko/quickstart/architecture/linux-bastion/
 
 # 관리효율
 
-1. CloudFormation 혹은 Terraform을 이용하여 서버 구성을 코드로 관리한다.
+1. [CloudFormation](https://aws.amazon.com/ko/cloudformation/) 혹은 [Terraform](https://www.terraform.io/)을 이용하여 서버 구성을 코드로 관리한다.
 2. 인스턴스의 기반이 되는 이미지를 미리 구워두면 편한데, 이때는 Packer 사용을 고려한다.
-3. MSA로 구성할 때에는 설정파일이 하나의 서버에서 받아올 수 있게 하여 설정 정보가 바뀌어도 문제 없도록 한다.
-4. 서버 설정을 할 때 노가다를 하고 있다는 생각이 들면 Docker나 Ansible 같은 툴을 검토한다.
+3. MSA로 구성할 때에는 설정파일이 하나의 서버에서 받아올 수 있게 하여 설정 정보가 바뀌어도 문제 없도록 한다. (e.g., [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/), [Consul](https://www.consul.io/))
+4. 서버 설정을 할 때 노가다를 하고 있다는 생각이 들면 [Docker](https://www.docker.com/)나 [Ansible](https://www.ansible.com/) 같은 툴을 검토한다.
