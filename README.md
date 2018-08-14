@@ -24,8 +24,8 @@ https://aws.amazon.com/ko/quickstart/architecture/linux-bastion/
 # 장애 예방
 
 1. EC2 볼륨, RDS의 데이터가 항상 날라갈 수 있으므로 RDS는 정기적인 스냅샷을 기록하고, EBS 대신 EFS 를 고려해본다.
-2. 헬스체크는 Pingdom, Newrelic 같은 외부 서비스를 이용한다.
-3. 크론이 가끔씩 죽는 경우 Cronitor 같은 외부 서비스를 이용하여 죽으면 알림이 오게 한다.
+2. 헬스체크는 [Pingdom](https://www.pingdom.com/), [Newrelic](https://newrelic.com/) 같은 외부 서비스를 이용한다.
+3. 크론이 가끔씩 죽는 경우 [Cronitor](https://cronitor.io) 같은 외부 서비스를 이용하여 죽으면 알림이 오게 한다.
 
 
 # 관리효율
