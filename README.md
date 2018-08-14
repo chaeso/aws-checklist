@@ -5,7 +5,7 @@ AWS 서버 운영하면서 놓치지 말아야 할 사항들을 공유하기 위
 # 보안
 1. Bastion 호스트 접속은 특정 IP에서만 접속 가능하게 하고 생성은 다음 튜토리얼을 기반으로 만든다. 
 https://aws.amazon.com/ko/quickstart/architecture/linux-bastion/
-2. 관리자 사이트는 외부인의 접속을 원천적으로 막기 위해 VPN 혹은 CloudFront 의 Access 기능을 사용한다.
+2. 관리자 사이트는 외부인의 접속을 원천적으로 막기 위해 VPN 혹은 [CloudFront](https://aws.amazon.com/ko/cloudfront/) 의 Access 기능을 사용한다.
 3. 주요 사이트 접속은 OTP 사용을 의무화 한다.
 4. 공개적으로 열려 있는 포트를 최소화 한다.
 5. 어플리케이션의 설정 정보는 암호화 해서 보관한다.
@@ -17,13 +17,13 @@ https://aws.amazon.com/ko/quickstart/architecture/linux-bastion/
 # 성능/부하처리
 
 1. 사용자가 급격히 늘어날 수 있다면 오토스케일을 적용 한다.
-2. Google PageSpeed를 이용하여 서버 설정이 적절하게 되어 있는지 확인한다.
+2. [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)를 이용하여 서버 설정이 적절하게 되어 있는지 확인한다.
 3. 부하가 많이 발생하는 API가 외부에 노출되는 경우 Rate Limit 을 건다. (API Gateway)
 
 
 # 장애 예방
 
-1. EC2 볼륨, RDS의 데이터가 항상 날라갈 수 있으므로 RDS는 정기적인 스냅샷을 기록하고, EBS 대신 EFS 를 고려해본다.
+1. EC2 볼륨, RDS의 데이터가 항상 날라갈 수 있으므로 RDS는 정기적인 스냅샷을 기록하고, EBS 대신 [EFS](https://aws.amazon.com/ko/efs/) 를 고려해본다.
 2. 헬스체크는 [Pingdom](https://www.pingdom.com/), [Newrelic](https://newrelic.com/) 같은 외부 서비스를 이용한다.
 3. 크론이 가끔씩 죽는 경우 [Cronitor](https://cronitor.io) 같은 외부 서비스를 이용하여 죽으면 알림이 오게 한다.
 
